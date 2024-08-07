@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const clickedSrc = element.getAttribute('data-clicked');
             if (clickedSrc) {
                 element.load(clickedSrc);
+                element.play();
             }
         }
 
@@ -48,9 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         textDisplay.style.display = 'block';
         texto2.style.display = 'none';
         animatedElements.forEach(player => {
-            if (player.isLoaded) {
-                player.play();
-            }
+            player.play();
         });
     }
 
@@ -58,41 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
         img.addEventListener('click', () => handleElementClick(img));
     });
 
-    animatedElements.forEach((lottie) => {
-        lottie.addEventListener('ready', () => {
-            lottie.isLoaded = true;
-            setupLottieEvents(lottie);
-        });
-    });
-
-    function setupLottieEvents(player) {
-        let isPlaying = false;
-
-        player.addEventListener('mouseenter', () => {
-            if (!isPlaying && player.isLoaded) {
-                player.play();
-                isPlaying = true;
-            }
+    lottiePlayers.forEach(player => {
+        player.addEventListener('mouseover', () => {
+            player.play();
         });
 
-        player.addEventListener('mouseleave', () => {
-            if (player.isLoaded) {
-                player.stop();
-                isPlaying = false;
-            }
+        player.addEventListener('mouseout', () => {
+            player.stop();
         });
 
         player.addEventListener('click', (event) => {
             event.stopPropagation();
-            player.classList.toggle('color-change');
             handleElementClick(player);
-        });
-    }
-
-    lottiePlayers.forEach(player => {
-        player.addEventListener('ready', () => {
-            player.isLoaded = true;
-            setupLottieEvents(player);
         });
     });
 });

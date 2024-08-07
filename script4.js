@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const y = e.clientY - rect.top;
 
         const gifMapping = {
-            'png1': 'floresG.gif',
-            'png2': 'rioG.gif',
-            'png3': 'sheepG.gif',
-            'png4': 'nuvem.gif',
-            'png5': 'aldeia.gif',
-            'png6': 'sol.gif',
-            'png7': 'arvore.gif',
-            'png8': 'borboleta.gif'
+            'png1': 'floresG.GIF',
+            'png2': 'rioG.GIF',
+            'png3': 'sheepG.GIF',
+            'png4': 'nuvem.GIF',
+            'png5': 'aldeia.GIF',
+            'png6': 'sol.GIF',
+            'png7': 'arvore.GIF',
+            'png8': 'borboleta.GIF'
         };
 
         const audioMapping = {

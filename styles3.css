@@ -1,0 +1,239 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Rammetto One', sans-serif;
+    overflow: hidden;
+
+}
+
+.background {
+    align-items: center;
+}
+
+.background img {
+    width: 100vw;
+    height: auto;
+    top: -10vw;
+    position: absolute;
+}
+
+#janela {
+    width: 34vw;
+    left: 34vw;
+    top: 5vw;
+    cursor: pointer;
+}
+
+#opiario {
+    width: 34vw;
+    left: 34vw;
+    top: 5vw;
+    cursor: pointer;
+}
+
+#comoda1 {
+    width: 13vw;
+    left: 75vw;
+    top: 25vw;
+    cursor: pointer;
+}
+
+#comoda2 {
+    width: 36vw;
+    left: 63vw;
+    top: 18vw;
+    cursor: pointer;
+}
+
+
+
+#candeeiro1 {
+    width: 8vw;
+    top: -7.5vw;
+    left: 64.5vw;
+    cursor: pointer;
+}
+
+#candeeiro2 {
+    width: 8vw;
+    top: -7.5vw;
+    left: 30vw;
+    cursor: pointer;
+}
+
+#cortina {
+    width: 100vw;
+    top: -6vw;
+    cursor: pointer;
+}
+
+#opio {
+    width: 30vw;
+    left: 36vw;
+    top: 28vw;
+    cursor: pointer;
+    z-index: 400;
+}
+
+#planta {
+    width: 79vw;
+    left: 0vw;
+    top: 17.2vw;
+    cursor: pointer;
+}
+
+.navigator {
+    position: absolute;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 52vw;
+    left: 5vw;
+    position: absolute;
+    pointer-events: none;
+}
+
+#fumo-container {
+    left: 5vw;
+    top: -15vw;
+}
+
+.alvaro {
+    width: 70vw;
+    height: auto;
+    transform: rotate(10deg);
+}
+
+#alvaromeio {
+    display: none;
+}
+
+.fumo {
+    width: 50vw;
+    height: auto;
+    position: absolute;
+}
+
+.text {
+    text-align: center;
+    position: absolute;
+    top: 2vw;
+}
+
+.texto {
+    justify-content: center;
+}
+
+.fumodepois {
+    height: auto;
+    animation: floatUp 5s ease-in-out forwards;
+    position: absolute;
+}
+
+.img_guia img {
+    opacity: 50%;
+    width: 100vw;
+    height: auto;
+    top: -10vw;
+    position: absolute;
+}
+
+@keyframes floatUp {
+    0% {
+        top: 30vw;
+        width: 5vw;
+        left: 40vw;
+    }
+    20% {
+        left: 37vw;
+    }
+    42% {
+        left: 42vw;
+    }
+    57% {
+        left: 38vw;
+    }
+    100% {
+        top: -9vw;
+        width: var(--width-vw, 10vw);
+        left: var(--esq-vw, 0vw);
+    }
+}
+
+@keyframes dangle-left-to-right {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+@keyframes dangle-right-to-left {
+    0% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+.dangle1 {
+    animation: dangle-left-to-right 1s ease-in-out;
+}
+
+.dangle2 {
+    animation: dangle-right-to-left 1s ease-in-out;
+}
+
+#preloader{
+    background: #fff url(images/preloader.gif) no-repeat center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+  }
+
+  .navigator {
+    z-index: 1000;
+    position: fixed;
+    border: none; 
+    background: none; 
+    cursor: pointer; 
+    left:5vw;
+    top: 3vw;
+  }
+  .navigator::before,
+  .navigator::after {
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transition: left 0.1s;
+  }
+  .navigator::before {
+    border-color: #000;
+    border-style: solid;
+    border-width: 0 0 0.3em 0.3em; 
+    height: 1.5em;
+    margin-top: -0.75em;
+    width: 1.5em;
+    border-radius: 0.3em;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .navigator::after {
+    background: #000;
+    height: 0.3em;
+    width: 2em;
+    border-radius: 0.15em;
+  }
+  
+  .navigator:hover::before,
+  .navigator:hover::after {
+    left: -0.3em;
+  }
+  .a{
+  text-decoration: none;
+  }

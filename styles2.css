@@ -1,0 +1,675 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+
+}
+
+.color-change {
+    opacity: 100%;
+}
+
+.rascunho {
+    width: 92vw;
+    height: auto;
+    top: 1.2vw;
+    left: 3.8vw;
+    position: absolute;
+    margin: 0 auto;
+    opacity: 60%;
+    display: none;
+
+}
+
+ .texto3, .texto4, .texto5, .texto6 {
+    text-align: center;
+    left: 29vw;
+    font-size: 1.5vw;
+    display: none;
+    top: 10vw;
+    position: absolute;
+}
+
+.container-1{
+    justify-content: center;
+    position: relative;
+}
+
+.texto2 {
+    text-align: center;
+    font-size: 1.5vw;
+    position: absolute;
+    left: 50%;
+    top:53vw;
+    transform: translate(-50%, -50%);
+}
+
+.text-display {
+    text-align: center;
+    font-size: 1.5vw;
+    position: absolute;
+    left: 50%;
+    top:54.5vw;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans' sans-serif;
+    font-weight: 300;
+}
+
+
+.container-2 {
+    position: absolute;
+    left: 44vw;
+    top: 53vw;
+    display: none;
+}
+
+.container-3{
+    position: absolute;
+    top: -1vw;
+    left: -0.2%;
+}
+
+#selection-rect {
+    position: absolute;
+    border: 2px dashed #000;
+    background: rgba(0, 0, 255, 0.1);
+    display: none;
+    pointer-events: none; 
+}
+
+.container-lottie {
+    position: relative;
+    width: 95%;
+    height: 100vh; 
+    overflow: hidden; 
+    z-index: 100;
+}
+
+#preloader{
+    background: #fff url(images/preloader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+  }
+
+  .navigator {
+    z-index: 500;
+    position: absolute;
+    border: none; 
+    background: none; 
+    cursor: pointer; 
+    left:5vw;
+    top: 3vw;
+}
+.navigator::before,
+.navigator::after {
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transition: left 0.1s;
+}
+.navigator::before {
+    border-color: #000;
+    border-style: solid;
+    border-width: 0 0 0.3em 0.3em; 
+    height: 1.5em;
+    margin-top: -0.75em;
+    width: 1.5em;
+    border-radius: 0.3em;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.navigator::after {
+    background: #000;
+    height: 0.3em;
+    width: 2em;
+    border-radius: 0.15em;
+}
+
+.navigator:hover::before,
+.navigator:hover::after {
+    left: -0.3em;
+}
+.a{
+text-decoration: none;
+}
+
+.container-lottie-static{
+    z-index: 80;
+    opacity: 100%;
+}
+
+.container-lottie-animated{
+    z-index: 80;
+    opacity: 100%;
+}
+
+.estatico1 {
+    position: absolute;
+    width: 12.6vw;
+    top: 4.7vw;
+    left: 13vw;
+}
+
+.estatico2 {
+    width: 12.7vw;
+    position: absolute;
+    top: 17vw;
+    left: 28.2vw;
+}
+
+.estatico3{
+    width: 13.3vw;
+    position: absolute;
+    top: 6.5vw;
+    left: 23.5vw;
+}
+
+.estatico4 {
+    width: 10vw;
+    position: absolute;
+    top: 11.9vw;
+    left: 22.4vw;
+}
+
+.estatico5 {
+    width: 9.65vw;
+    position: absolute;
+    top: 15.63vw;
+    left: 35.89vw;
+}
+
+.estatico6 {
+    width: 13.9vw;
+    position: absolute;
+    top: 12.5vw;
+    left: 40.0vw;
+}
+
+.estatico7 {
+    width: 5.5vw;
+    position: absolute;
+    top: 31.3vw;
+    left: 7.7vw;
+}
+
+.estatico8 {
+    width: 8vw;
+    position: absolute;
+    top: 29.6vw;
+    left: 27.5vw;
+}
+
+.estatico9 {
+    width: 9vw;
+    position: absolute;
+    top: 26.4vw;
+    left: 20.5vw;
+}
+
+.estatico10 {
+    width: 6vw;
+    position: absolute;
+    top: 6.5vw;
+    left: 21.58vw;
+}
+
+.estatico11 {
+    width: 10.9vw;
+    position: absolute;
+    top: 16.1vw;
+    left: 47.35vw;
+    z-index: 2;
+}
+
+.estatico12 {
+    width: 6.38vw;
+    position: absolute;
+    top: 21.3vw;
+    left: 65.85vw;
+}
+
+.estatico13 {
+    width: 12.8vw;
+    position: absolute;
+    top: 17.88vw;
+    left: 70.2vw;
+}
+
+.estatico14 {
+    width: 5.9vw;
+    position: absolute;
+    top: 17vw;
+    left: 79.9vw;
+}
+
+.estatico15 {
+    width: 9.5vw;
+    position: absolute;
+    top: 3.59vw;
+    left: 84.9vw;
+}
+
+.estatico16 {
+    width: 18.6vw;
+    position: absolute;
+    top: 28.85vw;
+    left: 71.5vw;
+}
+
+.estatico17 {
+    width: 7vw;
+    position: absolute;
+    top: 31.5vw;
+    left: 60.73vw;
+}
+
+.estatico18 {
+    width: 14.8vw;
+    position: absolute;
+    top: 35.4vw;
+    left: 61.8vw;
+    z-index: 3;
+}
+
+.estatico19 {
+    width: 8.5vw;
+    position: absolute;
+    top: 31.85vw;
+    left: 54.45vw;
+}
+
+.estatico20 {
+    width: 15vw;
+    position: absolute;
+    top: 36.2vw;
+    left: 51.9vw;
+}
+
+.estatico21 {
+    width: 8.09vw;
+    position: absolute;
+    top: 37.4vw;
+    left: 74vw;
+}
+
+.estatico22 {
+    width: 8.4vw;
+    position: absolute;
+    top: 39.4vw;
+    left: 46.7vw;
+}
+
+.estatico23 {
+    width: 10vw;
+    position: absolute;
+    top: 46.5vw;
+    left: 33.85vw;
+}
+
+.estatico24 {
+    width: 4.5vw;
+    position: absolute;
+    top: 39.6vw;
+    left: 38.6vw;
+}
+
+.estatico25 {
+    width: 10.7vw;
+    position: absolute;
+    top: 41.3vw;
+    left: 31.1vw;
+}
+
+.estatico26 {
+    width: 11.5vw;
+    position: absolute;
+    top: 30.1vw;
+    left: 26.8vw;
+}
+
+.estatico27 {
+    width: 8.5vw;
+    position: absolute;
+    top: 44.7vw;
+    left: 26.2vw;
+}
+
+.estatico28 {
+    width: 9.5vw;
+    position: absolute;
+    top: 35.6vw;
+    left: 23vw;
+}
+
+.estatico29 {
+    width: 12.25vw;
+    position: absolute;
+    top: 34.4vw;
+    left: 40.15vw;
+}
+
+.estatico30 {
+    width: 11.5vw;
+    position: absolute;
+    top: 2.78vw;
+    left: 24.7vw;
+}
+
+.estatico31 {
+    width: 18.65vw;
+    position: absolute;
+    top: 2.35vw;
+    left: 35.7vw;
+}
+
+.estatico32{
+    width: 17.49vw;
+    position: absolute;
+    top: 24.2vw;
+    left: 52.15vw;
+    z-index: 1;
+    }
+
+    .estatico33 {
+        width: 11.5vw;
+        position: absolute;
+        top: 15.6vw;
+        left: 12.45vw;
+        z-index: 1;
+    }
+
+    .estatico34{
+    width: 10vw;
+    position: absolute;
+    top: 31.2vw;
+    left: 83.15vw;
+    z-index: 1;
+        }
+
+    .lottie1 {
+        width: 10.5vw;
+        height: auto;
+        position: absolute;
+        top: 6.3vw;
+        left: 13.7vw;
+        z-index: 1;
+    }
+
+    .lottie2 {
+        width: 13.9vw;
+    position: absolute;
+    top: 18.3vw;
+    left: 20.85vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie3{
+    width: 11.85vw;
+    position: absolute;
+    top: 25.67vw;
+    left: 10.26vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie4{
+    width: 13vw;
+    position: absolute;
+    top: 41vw;
+    left: 6.5vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie5{
+    width: 11.2vw;
+    position: absolute;
+    top: 29.4vw;
+    left: 45.8vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie6{
+    width: 11vw;
+    position: absolute;
+    top: 36.5vw;
+    left: 24.7vw;
+    z-index: 100;
+    height: auto;
+}
+
+.lottie7{
+    width: 14vw;
+    position: absolute;
+    top: 8.4vw;
+    left: 61.25vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie8{
+    width: 11.3vw;
+    position: absolute;
+    top: 1.43vw;
+    left: 77.40vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie9{
+    width: 19.9vw;
+    position: absolute;
+    top: 12.8vw;
+    left: 78vw;
+    z-index: 1;
+    height: auto;
+    z-index: 1;
+}
+
+.lottie10{
+    width: 16vw;
+    position: absolute;
+    top: 37vw;
+    left: 79.6vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie11 {
+    width: 12.8vw;
+    position: absolute;
+    top: 27.9vw;
+    left: 65.7vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie12{
+    width: 12.4vw;
+    position: absolute;
+    top: 39vw;
+    left: 16.2vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie13{
+    width: 11.89vw;
+    position: absolute;
+    top: 40.79vw;
+    left: 39.54vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie14{
+    width: 17.95vw;
+    position: absolute;
+    top: 1.14vw;
+    left: 50.65vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie15{
+    width: 20vw;
+    position: absolute;
+    top: 39.4vw;
+    left: 73.6vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie16{
+    width: 11.95vw;
+    position: absolute;
+    top: 5vw;
+    left: 30.2vw;
+    height: auto;
+}
+
+.lottie17{
+    width: 13.50vw;
+    position: absolute;
+    top: 10.03vw;
+    left: 71.69vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie18{
+    width: 11.2vw;
+    position: absolute;
+    top: 30.7vw;
+    left: 35.4vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie19{
+    width: 9.5vw;
+    position: absolute;
+    top: 17.5vw;
+    left: 6.12vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie20{
+    width: 14.85vw;
+    position: absolute;
+    top: 41.42vw;
+    left: 48.72vw;
+    z-index: 100;
+    height: auto;
+}
+
+.lottie21{
+    width: 9.6vw;
+    position: absolute;
+    top: 12.36vw;
+    left: 16.05vw;
+    z-index: 1;
+    height: auto;
+    z-index: 1;
+}
+
+.lottie22{
+    width: 10.86vw;
+    position: absolute;
+    top: 3.2vw;
+    left: 67.9vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie23{
+    width: 11.9vw;
+    position: absolute;
+    top: 14.0vw;
+    left: 55.09vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie24{
+    width: 15.1vw;
+    position: absolute;
+    top: 4.05vw;
+    left: 5.6vw;
+    z-index: 1;
+    height: auto;
+}
+.lottie25{
+    width: 9.65vw;
+    position: absolute;
+    top: 31.45vw;
+    left: 20.95vw;
+    z-index: 300;
+    height: auto;
+}
+
+.lottie26{
+    width: 15.5vw;
+    position: absolute;
+    top: 17.5vw;
+    left: 74.2vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie27{
+    width: 17.2vw;
+    position: absolute;
+    top: 38.23vw;
+    left: 62.7vw;
+    z-index: 1;
+    height: auto;
+}
+
+.lottie28{
+    width: 13.9vw;
+    position: absolute;
+    top: 23.77vw;
+    left: 31.89vw;
+    z-index: 1;
+    height: auto;
+}
+.lottie29{
+    width: 10.91vw;
+    position: absolute;
+    top: 24.79vw;
+    left: 42.81vw;
+    z-index: 2;
+    height: auto;
+}
+
+.lottie30{
+    width: 16.2vw;
+    position: absolute;
+    top: 34.7vw;
+    left: 6.18vw;
+    z-index: 2;
+    height: auto;
+}
+
+.clicked {
+    z-index: 1 !important;
+}
+
+:is(img, dotlottie-player) {
+    z-index: 10;
+}
+
+
+
+
+
+
+
+

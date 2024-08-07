@@ -1,0 +1,441 @@
+body {
+  font-family: 'Rammetto One', sans-serif;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.hidden {
+  display: none;
+}
+
+.nao, .sei, .quantas, .almas, .tenho {
+  position: absolute;
+}
+
+.nao, .sei, .quantas {
+  font-size: 8.8vw;
+  line-height: 1vw;
+  top: 19.8vw;
+}
+
+.nao {
+  left: 0vw;
+}
+
+.sei {
+  left: 27.5vw;
+}
+
+.quantas {
+  left: 45.7vw;
+}
+
+.almas {
+  font-size: 21.2vw;
+  line-height: 1vw;
+  top: 32.7vw;
+  letter-spacing: 1vw;
+  left: 0vw;
+}
+
+.tenho {
+  font-size: 22.8vw;
+  line-height: 1vw;
+  top: 50vw;
+  letter-spacing: 1vw;
+  left: 0vw;
+}
+
+.fernando, .pessoa, .alberto, .caeiro, .alvaro, .de, .campos, .ricardo, .reis {
+  color: #292929;
+}
+
+.fernando, .pessoa {
+  font-size: 8.2vw;
+  position: absolute;
+  top: 6.6vw;
+}
+
+.pessoa {
+  left: 59vw;
+}
+
+.alberto, .caeiro {
+  font-size: 9vw;
+  position: absolute;
+  top: 5.7vw;
+}
+
+.caeiro {
+  left: 56vw;
+}
+
+.alvaro, .de, .campos {
+  font-size: 7.9vw;
+  position: absolute;
+  top: 6.9vw;
+}
+
+.de {
+  left: 42vw;
+}
+
+.campos {
+  left: 57vw;
+}
+
+.ricardo, .reis {
+  font-size: 11vw;
+  position: absolute;
+  top: 3.3vw;
+}
+
+.reis {
+  left: 69vw;
+}
+
+.text1, .text2, .text3, .text4 {
+  display: none;
+  z-index: 9;
+}
+
+.head {
+  transition: transform 0.3s ease;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  55% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+}
+
+.nao-sei {
+  animation: drop 0.9s linear forwards;
+  color: #ffffff;
+  -webkit-text-stroke: 3.5px #292929;
+  z-index: 10;
+}
+
+.drop {
+  animation: drop 0.5s linear forwards;
+}
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100vw;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  top: 2vw;
+  position: absolute;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62vw;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60vw;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: -7vw;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  right: -7vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 100% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 100% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+
+.navbar .menu-items {
+  padding-top: 10vw;
+  height: 100vh;
+  width: 16vw;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  padding-right: 0vw;
+  position: fixed;
+  right: 0; 
+  top: 0; 
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: right;
+  padding-right: 3vw;
+}
+
+.main-container {
+  width: calc(100% - 250px);
+  transition: width 0.5s ease-in-out;
+}
+
+.main-container.menu-open {
+  width: calc(100% - 30vw);
+}
+
+.menu-open1 {
+  transform: translateX(16vw);
+}
+
+.nao-sei {
+  width: calc(100% - 250px);
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(45deg);
+}
+
+
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.row-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10vw;
+}
+
+.img_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img_fernando .body,
+.img_fernando .head {
+  width: 15.5vw;
+}
+
+.img_ricardo .body,
+.img_ricardo .head {
+  width: 13vw;
+}
+
+.img_alberto .body,
+.img_alberto .head {
+  width: 13vw;
+}
+
+.img_alberto .head-container,
+.img_ricardo .head-container {
+  position: absolute;
+  top: -23.7vw;
+}
+
+.img_fernando .head-container {
+  position: absolute;
+  top: -26.1vw;
+}
+
+.img_alvaro .body,
+.img_alvaro .head {
+  width: 15vw;
+}
+
+#alvaro-img,
+#alberto-img,
+#ricardo-img,
+#fernando-img {
+  top: 40vw;
+  position: relative;
+}
+
+.img_alvaro .head-container {
+  position: absolute;
+  top: -25.6vw;
+}
+
+#monocle {
+  position: absolute;
+  width: 20vw;
+  top: -11vw;
+  left: -1.5vw;
+}
+
+.img_fernando .eye {
+  position: absolute;
+  width: 5vw;
+}
+
+.img_alberto .eye {
+  position: absolute;
+  width: 4vw;
+}
+
+.img_alvaro .eye,
+.img_ricardo .eye {
+  position: absolute;
+  width: 3.5vw;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+#preloader {
+  background: #fff url(images/preloader.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+@media screen and (max-width: 1024px) {
+  .nao, .sei, .quantas, .almas, .tenho {
+    -webkit-text-stroke: 2px #292929;
+  }
+
+
+  .img_fernando .eye,
+  .img_alberto .eye,
+  .img_alvaro .eye,
+  .img_ricardo .eye {
+    width: 4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nao, .sei, .quantas, .almas, .tenho {
+    -webkit-text-stroke: 2px #292929;
+  }
+
+
+  .img_fernando .eye,
+  .img_alberto .eye,
+  .img_alvaro .eye,
+  .img_ricardo .eye {
+    width: 4vw;
+  }
+
+
+@media screen and (max-width: 480px) {
+  .nao, .sei, .quantas, .almas, .tenho {
+    -webkit-text-stroke: 2px #292929;
+  }
+
+
+  .img_fernando .eye,
+  .img_alberto .eye,
+  .img_alvaro .eye,
+  .img_ricardo .eye {
+    width: 4vw;
+  }
+}
+}

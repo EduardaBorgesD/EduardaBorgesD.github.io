@@ -1,0 +1,154 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#background-image {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.draggable {
+  width: 10vw;
+  height: auto;
+  cursor: move;
+  position: relative;
+}
+
+#png-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: -2vw;
+  background-color: rgba(240, 240, 240, 1);
+  border-top: 1px solid #cccccc;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+#png-container img {
+  width: 7%;
+  height: auto;
+}
+
+#preloader {
+    background: #fff url(images/preloader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+
+.navigator {
+    z-index: 1000;
+    position: fixed;
+    border: none; 
+    background: none; 
+    cursor: pointer; 
+    left:5vw;
+    top: 3vw;
+  }
+  .navigator::before,
+  .navigator::after {
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transition: left 0.1s;
+  }
+  .navigator::before {
+    border-color: #000;
+    border-style: solid;
+    border-width: 0 0 0.3em 0.3em; 
+    height: 1.5em;
+    margin-top: -0.75em;
+    width: 1.5em;
+    border-radius: 0.3em;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .navigator::after {
+    background: #000;
+    height: 0.3em;
+    width: 2em;
+    border-radius: 0.15em;
+  }
+  
+  .navigator:hover::before,
+  .navigator:hover::after {
+    left: -0.3em;
+  }
+  .a{
+  text-decoration: none;
+  }
+
+  .sheep-gif{
+    width: 15vw;
+    height: auto;
+    z-index: 50;
+  }
+
+  .flores-gif{
+    width: 30vw;
+    height: auto;
+    z-index: 21;
+  }
+
+  .rio-gif{
+    width: 16.75vw;
+    height: auto;
+  }
+
+  #wind{
+    width: 60vw;
+    height: auto;
+    position: absolute;
+    top: 18vw;
+    left: 20vw;
+    opacity: 50%;
+    z-index: 100;
+    transform: scaleX(-1);
+    pointer-events: none;
+  }
+
+  .draggable1 {
+    width: 10vw;
+    height: auto;
+    cursor: move;
+    position: absolute;
+  }
+
+  .nuvem-gif{
+    width: 100vw;
+    z-index: 400;
+  }
+
+  .arvore-gif{
+    width: 30vw;
+    z-index: 500;
+    pointer-events: none;
+  }
+
+  .borboleta-gif{
+    width: 100vw;
+    z-index: 600;
+    pointer-events: none;
+  }

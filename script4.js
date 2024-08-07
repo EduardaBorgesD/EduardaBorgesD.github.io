@@ -56,26 +56,26 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const audioMapping = {
-            'floresG.gif': ['gif-flores-audio'],
-            'rioG.gif': ['gif-rio-audio'],
-            'sheepG.gif': ['gif-ovelha-audio'],
-            'aldeia.gif': ['gif-lapide-audio'],
-            'nuvem.gif': ['gif-nuvem-audio'],
-            'sol.gif': ['gif-sol-audio'],
-            'arvore.gif': ['gif-arvore-audio'],
-            'borboleta.gif': ['gif-borboleta-audio']
+            'floresG.GIF': ['gif-flores-audio'],
+            'rioG.GIF': ['gif-rio-audio'],
+            'sheepG.GIF': ['gif-ovelha-audio'],
+            'aldeia.GIF': ['gif-lapide-audio'],
+            'nuvem.GIF': ['gif-nuvem-audio'],
+            'sol.GIF': ['gif-sol-audio'],
+            'arvore.GIF': ['gif-arvore-audio'],
+            'borboleta.GIF': ['gif-borboleta-audio']
         };
         
         const backgroundAudioMapping = {
-            'rioG.gif': 'gif-rio-background-audio',
-            'sheepG.gif': 'gif-ovelha-background-audio',
-            'arvore.gif': 'gif-arvore-background-audio'
+            'rioG.GIF': 'gif-rio-background-audio',
+            'sheepG.GIF': 'gif-ovelha-background-audio',
+            'arvore.GIF': 'gif-arvore-background-audio'
         };
 
         const newGif = gifMapping[id];
         if (newGif) {
             if (positionedGifs.has(newGif)) {
-                if (newGif === 'rioG.gif') {
+                if (newGif === 'rioG.GIF') {
                     droppedImage.style.left = '100px';
                     droppedImage.style.top = '200px';
                 } else {
@@ -113,48 +113,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
 
-            if (newGif === 'sheepG.gif') {
+            if (newGif === 'sheepG.GIF') {
                 droppedImage.classList.add('sheep-gif');
-            } else if (newGif === 'floresG.gif'){
+            } else if (newGif === 'floresG.GIF'){
                 droppedImage.classList.add('flores-gif');
-            } else if (newGif === 'rioG.gif'){
+            } else if (newGif === 'rioG.GIF'){
                 droppedImage.classList.add('rio-gif');
-            } else if (newGif === 'nuvem.gif'){
+            } else if (newGif === 'nuvem.GIF'){
                 droppedImage.classList.add('nuvem-gif');}
-                else if (newGif === 'arvore.gif'){
+                else if (newGif === 'arvore.GIF'){
                     droppedImage.classList.add('arvore-gif')}
-                    else if (newGif === 'borboleta.gif'){
+                    else if (newGif === 'borboleta.GIF'){
                         droppedImage.classList.add('borboleta-gif')}else{
                 droppedImage.classList.add('draggable1');
             }
 
             droppedImage.style.position = 'absolute';
-            if (newGif === 'rioG.gif') {
+            if (newGif === 'rioG.GIF') {
                 droppedImage.style.left = '32.9vw';
                 droppedImage.style.top = '11.7vw';
                 droppedImage.style.position = 'fixed';
                 droppedImage.draggable = false;
-            } else if (newGif === 'nuvem.gif') {
+            } else if (newGif === 'nuvem.GIF') {
                     droppedImage.style.left = '0vw';
                     droppedImage.style.top = '-7vw';
                     droppedImage.style.position = 'fixed';
                     droppedImage.draggable = false;
-            } else if (newGif === 'arvore.gif') {
+            } else if (newGif === 'arvore.GIF') {
                 droppedImage.style.top = '0vw';
                 droppedImage.style.left = '73.2vw';
                 droppedImage.style.position = 'fixed';
                 droppedImage.draggable = false;
-            } else if (newGif === 'borboleta.gif') {
+            } else if (newGif === 'borboleta.GIF') {
 
                 droppedImage.style.left = '0vw';
                 droppedImage.style.position = 'fixed';
                 droppedImage.draggable = false;
             }
-                else if (newGif === 'sol.gif'){
+                else if (newGif === 'sol.GIF'){
                 droppedImage.style.left = `${x - (droppedImage.width / 2)}px`;
                 const sky = Math.max(0, Math.min(10, y - (droppedImage.height / 2) * 100 / window.innerHeight)) + 'vw';
                 droppedImage.style.top = sky;
-            }  else if (newGif === 'nuvem.gif') {
+            }  else if (newGif === 'nuvem.GIF') {
                 droppedImage.style.left = '0vw';}else {
                 droppedImage.style.left = `${x - (droppedImage.width / 2)}px`;
                 droppedImage.style.top = `${y - (droppedImage.height / 2)}px`;

@@ -15,10 +15,54 @@ body {
 
 .navbar {
   width: 100vw;
-  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
   top: 2vh;
   right: 2vw;
   position: absolute;
+}
+.sobre h2 {
+  margin-bottom: 2vw;
+  font-size: 2vw;
+}
+
+.créditos-text {
+  margin-top: 4vw;
+}
+
+h3,h1 {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  top: 6vw;
+  left: 27vw;
+  font-size: 0.9em; 
+}
+
+h2, h3 {
+  font-size: 0.9em;
+  position: relative;
+  left: 27vw;
+
+  top: 6vw;
+}
+
+.sobretext{
+  font-size: 0.9em;
+  position: relative;
+  left: 27vw;
+  font-family: 'Open Sans', sans-serif;
+  top: 6vw;
+  font-weight: 100;
+  line-height: 0.6;
+}
+
+.baseado{
+  margin-top: 1vw;
+  font-weight: 10;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+.baseado h2 {
+  font-weight: 100;
 }
 
 .nav-container {

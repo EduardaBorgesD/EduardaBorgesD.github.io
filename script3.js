@@ -4,7 +4,18 @@ var pressTimeout = null;
 var loader = document.getElementById("preloader");
 window.addEventListener("load", function(){
         loader.style.display="none";
-})
+});
+
+const colorFilters = [
+    'hue-rotate(0deg)',
+    'hue-rotate(90deg)',
+    'hue-rotate(180deg)',
+    'hue-rotate(270deg)',
+    'sepia(100%)',
+    'invert(100%)',
+    'grayscale(100%)',
+    'saturate(200%)'
+];
 
 document.addEventListener('keydown', function(event) {
     if (event.code === 'Space') {
@@ -51,23 +62,45 @@ function showRandomSvg() {
 }
 
 document.querySelectorAll('.element2').forEach(img => {
+    let currentFilterIndex = 0;
     img.addEventListener('click', () => {
-        img.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+        currentFilterIndex = (currentFilterIndex + 1) % colorFilters.length;
+        img.style.filter = colorFilters[currentFilterIndex];
+    });
+
+    const candeeiros = document.querySelectorAll('#candeeiro1, #candeeiro2');
+candeeiros.forEach((candeeiro, index) => {
+    candeeiro.addEventListener('click', () => {
+        console.log('Candeeiro clicked:', candeeiro);
+        const dangleClass = index % 2 === 0 ? 'dangle1' : 'dangle2';
+        candeeiro.classList.add(dangleClass);
+        
+        setTimeout(() => {
+            candeeiro.classList.remove(dangleClass);
+        }, 1000);
     });
 });
 
-    const candeeiros = document.querySelectorAll('#candeeiro1, #candeeiro2');
+let currentWindowIndex = 0;
+const windowImages = document.querySelectorAll('.janelas .element3');
 
-    candeeiros.forEach((candeeiro, index) => {
-        candeeiro.addEventListener('click', () => {
-            console.log('Candeeiro clicked:', candeeiro);
-            const dangleClass = index % 2 === 0 ? 'dangle1' : 'dangle2';
-            candeeiro.classList.add(dangleClass);
-            
-            setTimeout(() => {
-                candeeiro.classList.remove(dangleClass);
-            }, 1000);
-        });
-    });
+function changeWindow() {
 
+    windowImages[currentWindowIndex].style.display = 'none';
 
+    currentWindowIndex = (currentWindowIndex + 1) % windowImages.length;
+    
+    windowImages[currentWindowIndex].style.display = 'block';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const janelasContainer = document.querySelector('.janelas');
+    if (janelasContainer) {
+        janelasContainer.addEventListener('click', changeWindow);
+    }
+    if (windowImages.length > 0) {
+        windowImages[0].style.display = 'block';
+    }
+});
+
+});

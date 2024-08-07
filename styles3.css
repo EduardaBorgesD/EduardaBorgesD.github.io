@@ -72,15 +72,15 @@ body, html {
 #opio {
     width: 30vw;
     left: 36vw;
-    top: 28vw;
+    top: 25vw;
     cursor: pointer;
     z-index: 400;
 }
 
 #planta {
-    width: 79vw;
+    width: 68vw;
     left: 0vw;
-    top: 17.2vw;
+    top: 24.2vw;
     cursor: pointer;
 }
 

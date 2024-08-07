@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const backgroundAudio = document.getElementById('background-audio');
 
     const audioContainer = document.querySelector('.audios');
-if (audioContainer) {
-    const audioElements = audioContainer.querySelectorAll('audio');
-    audioElements.forEach(audio => {
-        audio.volume = 0.2;
-    });
-}
+    if (audioContainer) {
+        const audioElements = audioContainer.querySelectorAll('audio');
+        audioElements.forEach(audio => {
+            audio.volume = 0.2;
+        });
+    }
 
     if (backgroundAudio) {
         backgroundAudio.loop = true;
@@ -17,9 +17,9 @@ if (audioContainer) {
         backgroundAudio.play();
     }
 
-
     let currentAudio = null;
     const positionedGifs = new Set();
+    let playingBackgroundAudios = new Set();
 
     draggables.forEach(draggable => {
         draggable.addEventListener('dragstart', (e) => {
@@ -56,14 +56,20 @@ if (audioContainer) {
         };
 
         const audioMapping = {
-            'floresG.gif': 'gif-flores-audio',
-            'rioG.gif': 'gif-rio-audio',
-            'sheepG.gif': 'gif-ovelha-audio',
-            'aldeia.gif': 'gif-lapide-audio',
-            'nuvem.gif': 'gif-nuvem-audio',
-            'sol.gif': 'gif-sol-audio',
-            'arvore.gif': 'gif-arvore-audio',
-            'borboleta.gif': 'gif-borboleta-audio'
+            'floresG.gif': ['gif-flores-audio'],
+            'rioG.gif': ['gif-rio-audio'],
+            'sheepG.gif': ['gif-ovelha-audio'],
+            'aldeia.gif': ['gif-lapide-audio'],
+            'nuvem.gif': ['gif-nuvem-audio'],
+            'sol.gif': ['gif-sol-audio'],
+            'arvore.gif': ['gif-arvore-audio'],
+            'borboleta.gif': ['gif-borboleta-audio']
+        };
+        
+        const backgroundAudioMapping = {
+            'rioG.gif': 'gif-rio-background-audio',
+            'sheepG.gif': 'gif-ovelha-background-audio',
+            'arvore.gif': 'gif-arvore-background-audio'
         };
 
         const newGif = gifMapping[id];
@@ -86,7 +92,7 @@ if (audioContainer) {
                 currentAudio.currentTime = 0;
             }
 
-            const newAudioId = audioMapping[newGif];
+            const newAudioId = audioMapping[newGif][0];
             if (newAudioId) {
                 currentAudio = document.getElementById(newAudioId);
                 if (currentAudio) {
@@ -94,6 +100,18 @@ if (audioContainer) {
                     currentAudio.play();
                 }
             }
+
+            const backgroundAudioId = backgroundAudioMapping[newGif];
+            if (backgroundAudioId) {
+                const backgroundAudio = document.getElementById(backgroundAudioId);
+                if (backgroundAudio && !playingBackgroundAudios.has(backgroundAudioId)) {
+                    backgroundAudio.loop = true;
+                    backgroundAudio.volume = 0.1;
+                    backgroundAudio.play();
+                    playingBackgroundAudios.add(backgroundAudioId);
+                }
+            }
+
 
             if (newGif === 'sheepG.gif') {
                 droppedImage.classList.add('sheep-gif');

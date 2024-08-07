@@ -1,2 +1,2 @@
 # dissertacao
-A Case Study in Playful Illustration
+A Case Study in Playful Illustration.

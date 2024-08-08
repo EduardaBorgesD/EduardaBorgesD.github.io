@@ -1,7 +1,6 @@
 body {
     font-family: 'Open Sans', sans-serif;
 
-
 }
 
 .color-change {
@@ -39,7 +38,7 @@ body {
     font-size: 1.5vw;
     position: absolute;
     left: 50%;
-    top:53vw;
+    top:2vw;
     transform: translate(-50%, -50%);
 }
 
@@ -48,7 +47,7 @@ body {
     font-size: 1.5vw;
     position: absolute;
     left: 50%;
-    top:54.5vw;
+    top:2vw;
     transform: translate(-50%, -50%);
     font-family: 'Open Sans' sans-serif;
     font-weight: 300;
@@ -64,7 +63,7 @@ body {
 
 .container-3{
     position: absolute;
-    top: -1vw;
+    top: 3vw;
     left: -0.2%;
 }
 
@@ -186,6 +185,7 @@ text-decoration: none;
     position: absolute;
     top: 12.5vw;
     left: 40.0vw;
+    z-index: 1;
 }
 
 .estatico7 {
@@ -300,6 +300,7 @@ text-decoration: none;
     position: absolute;
     top: 39.4vw;
     left: 46.7vw;
+    z-index: 3;
 }
 
 .estatico23 {
@@ -314,6 +315,7 @@ text-decoration: none;
     position: absolute;
     top: 39.6vw;
     left: 38.6vw;
+    z-index: 12;
 }
 
 .estatico25 {
@@ -328,6 +330,7 @@ text-decoration: none;
     position: absolute;
     top: 30.1vw;
     left: 26.8vw;
+    z-index: 1;
 }
 
 .estatico27 {
@@ -342,6 +345,7 @@ text-decoration: none;
     position: absolute;
     top: 35.6vw;
     left: 23vw;
+    z-index: 20;
 }
 
 .estatico29 {
@@ -660,6 +664,7 @@ text-decoration: none;
 
 .clicked {
     z-index: 1 !important;
+    pointer-events: none !important;
 }
 
 :is(img, dotlottie-player) {

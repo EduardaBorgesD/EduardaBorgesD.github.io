@@ -75,13 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const newGif = gifMapping[id];
         if (newGif) {
             if (positionedGifs.has(newGif)) {
-                if (newGif === 'rioG.GIF') {
-                    droppedImage.style.left = '100px';
-                    droppedImage.style.top = '200px';
-                } else {
                     droppedImage.style.left = `${x - (droppedImage.width / 2)}px`;
                     droppedImage.style.top = `${y - (droppedImage.height / 2)}px`;
-                }
                 return;
             }
 
@@ -129,35 +124,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             droppedImage.style.position = 'absolute';
-            if (newGif === 'rioG.GIF') {
-                droppedImage.style.left = '32.9vw';
-                droppedImage.style.top = '11.7vw';
-                droppedImage.style.position = 'fixed';
-                droppedImage.draggable = false;
-            } else if (newGif === 'nuvem.GIF') {
-                    droppedImage.style.left = '0vw';
-                    droppedImage.style.top = '-7vw';
-                    droppedImage.style.position = 'fixed';
-                    droppedImage.draggable = false;
-            } else if (newGif === 'arvore.GIF') {
-                droppedImage.style.top = '0vw';
-                droppedImage.style.left = '73.2vw';
-                droppedImage.style.position = 'fixed';
-                droppedImage.draggable = false;
-            } else if (newGif === 'borboleta.GIF') {
+            if (newGif === 'borboleta.GIF') {
 
                 droppedImage.style.left = '0vw';
                 droppedImage.style.position = 'fixed';
                 droppedImage.draggable = false;
             }
-                else if (newGif === 'sol.GIF'){
-                droppedImage.style.left = `${x - (droppedImage.width / 2)}px`;
-                const sky = Math.max(0, Math.min(10, y - (droppedImage.height / 2) * 100 / window.innerHeight)) + 'vw';
-                droppedImage.style.top = sky;
-            }  else if (newGif === 'nuvem.GIF') {
-                droppedImage.style.left = '0vw';}else {
+               else {
                 droppedImage.style.left = `${x - (droppedImage.width / 2)}px`;
                 droppedImage.style.top = `${y - (droppedImage.height / 2)}px`;
+                droppedImage.draggable = true;
             }
 
             positionedGifs.add(newGif);

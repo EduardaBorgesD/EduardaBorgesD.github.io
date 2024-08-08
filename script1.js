@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const loader = document.getElementById('preloader');
     const frameCount = 3201;
     const currentFrame = (index) => `images/frames/${index.toString().padStart(5, "0")}.jpg`;
-    
+
     const imageCache = {};
     let currentIndex = 1;
-    const chunkSize = 200;
+    const chunkSize = 3660;
 
     canvas.width = 3660;
     canvas.height = 2100;
@@ -35,8 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
-    const loadChunk = (start, end) => {
-        for (let i = start; i <= end && i <= frameCount; i++) {
+    const loadVisibleFrames = () => {
+        const scrollTop = html.scrollTop;
+        const maxScrollTop = html.scrollHeight - window.innerHeight;
+        const scrollFraction = scrollTop / maxScrollTop;
+        const frameIndex = Math.min(
+            frameCount - 1,
+            Math.ceil(scrollFraction * frameCount)
+        );
+
+        const startIndex = Math.max(0, frameIndex - 50);
+        const endIndex = Math.min(frameCount, frameIndex + 100);
+
+        for (let i = startIndex; i <= endIndex; i++) {
             loadImage(i);
         }
     };
@@ -61,9 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (frameIndex !== currentIndex) {
                     currentIndex = frameIndex;
                     drawImage(currentIndex + 1);
-
-                    const nextChunkStart = Math.floor(currentIndex / chunkSize) * chunkSize + 1;
-                    loadChunk(nextChunkStart, nextChunkStart + chunkSize - 1);
                 }
 
                 scrollToTopButton.style.display = (frameIndex + 1 === frameCount) ? 'block' : 'none';
@@ -74,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    loadChunk(1, chunkSize);
+    loadVisibleFrames();
     drawImage(1);
 
     loadImage(1).then(() => {

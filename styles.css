@@ -1,9 +1,9 @@
 body {
   font-family: 'Rammetto One', sans-serif;
   height: 100%;
+    overflow: hidden;
   margin: 0;
   background-color: #ffffff;
-  overflow: hidden;
 }
 
 .hidden {
